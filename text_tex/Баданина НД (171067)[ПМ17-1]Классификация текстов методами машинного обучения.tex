@@ -1,0 +1,129 @@
+\documentclass{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian, english]{babel}
+\usepackage{graphicx}	
+\usepackage{amsmath, amssymb}
+\usepackage{titlesec}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage[14pt]{extsizes}
+\usepackage{setspace,amsmath}
+\usepackage[left=20mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=10mm]{geometry} 
+\usepackage{mathtext}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{ragged2e}
+\sloppy
+\usepackage{caption}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\graphicspath{ {img/} }
+%--------------------------------------------------------------------
+\begin{document}                                                         
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+Федеральное государственное образовательное бюджетное учреждение\\ высшего профессионального образования\\ 
+\textbf{«Финансовый университет при Правительстве Российской Федерации»}\\
+\end{center}
+	
+\vspace{2em}
+	
+\begin{center}
+\textbf{Департамент анализа данных, принятия решения и финансовых технологий}\\ 
+\end{center}
+	
+\vspace{2em}
+	
+\begin{center}
+\textbf{Курсовая работа\\
+\vspace{3mm}}
+по дисциплине \textbf{"Технологии анализа данных и машинное обучение"} на тему: \\ \vspace{2em} \textbf{"Классификация текстов методами машинного обучения"}\\
+\vspace{3mm}
+Вид исследуемых данных: Корпус новостей с сайта Lenta.Ru\\
+\end{center}
+	
+\vspace{6em}
+		
+\begin{flushright}
+Выполнила:\\
+студентка группы ПМ17-1\\
+Баданина Н. Д.\\
+Научный руководитель:\\
+доктор техн. наук, доцент\\
+Судаков Владимир Анатольевич
+\end{flushright}
+	
+\vspace{\fill}
+	
+\begin{center}
+Москва 2020
+\end{center}
+
+%--------------------------------------------------------------------
+\newpage
+	
+\renewcommand*\contentsname{Содержание}
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{0em}{2em}}
+\renewcommand{\l@subsection}{\@dottedtocline{1}{0em}{2.6em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{1}{0em}{3.2em}}
+
+\makeatother
+\setcounter{page}{2}
+
+\begin{center}
+	\tableofcontents
+\end{center}
+%--------------------------------------------------------------------
+\newpage
+\addcontentsline{toc}{section}{Введение}
+\section*{Введение}
+%--------------------------------------------------------------------
+\newpage
+\subsection{Сложности при обработке текстов на естественном языке}
+%--------------------------------------------------------------------
+\newpage
+\subsection{Перспективы развития технологии}
+%--------------------------------------------------------------------
+\newpage
+\section{Теоретическая часть} 
+%--------------------------------------------------------------------
+\newpage
+\subsection{Задача классификации текстов}
+%--------------------------------------------------------------------
+\newpage
+\subsection{Модели классификации}
+%--------------------------------------------------------------------
+\newpage
+\section{Практическая часть}
+\subsection{Работа с данными}
+%--------------------------------------------------------------------
+\newpage
+\addcontentsline{toc}{section}{Заключение}
+\section*{Заключение}
+%--------------------------------------------------------------------
+\newpage
+\addcontentsline{toc}{section}{Список использованных источников}
+\section*{Список использованных источников}
+\renewcommand{\refname}{}
+\begin{thebibliography}{7}
+\bibitem{i1} Applied Text Analysis with Python by Benjamin Bengfort, Rebecca Bilbro, and Tony Ojeda (O’Reilly). 978­1­491­96304­3
+\end{thebibliography}
+%--------------------------------------------------------------------
+\newpage
+\addcontentsline{toc}{section}{Приложение}
+\section*{Приложение}
+\tabИсходный код можно найти по \href{https://github.com/dokapoka/paper_text_classification}{ссылке}.
+
+
+
+
+
+ \end{document}  
