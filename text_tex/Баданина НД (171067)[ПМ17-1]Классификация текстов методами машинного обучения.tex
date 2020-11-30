@@ -296,12 +296,16 @@ $$P(w|t) = \frac{F_{r}(w,t)+1}{F_{r}(w)+|R(w)|}$$\\
 \begin{center}
 \begin{tabular}{||c | c | c||} 
 \hline
- Algorithm name & Accuracy & Time \\ [0s.5ex] 
+ Algorithm name & Accuracy & Time \\ [0.5ex] 
  \hline\hline
- SGDClassifier() & 71\% & 1 min.\\ 
-  \hline
- LinearSVC & 71\% & 2 sec. \\  
+   GridSearchCV with LinearSVC() & 71.77\% & 13 min. \\  
  \hline
+  BaggingClassifier with LinearSVC() & 71.28\% & 4 min. \\  
+ \hline
+ LinearSVC() & 71.15\% & 2 sec. \\  
+ \hline
+ SGDClassifier() & 70.8\% & 1 min.\\ 
+  \hline
  LogisticRegression() & 69\% & 3 min. \\   
  \hline
  PassiveAggressiveClassifier() &67 \% &  3 min.\\
@@ -310,11 +314,14 @@ $$P(w|t) = \frac{F_{r}(w,t)+1}{F_{r}(w)+|R(w)|}$$\\
  \hline
  DecisionTreeClassifier() & 57\% & 8 min.\\
  \hline
- MultinomialNB() & 55\% & 1 sec.\\ 
-  [1ex] 
+ MultinomialNB() & 55\% & 1 sec.\\  [1ex] 
  \hline
 \end{tabular}
-\end{center}
+\end{center}\\
+\includegraphics[scale=0.8]{f13.png}\\
+\tabНаилучшим образом алгоритм классификации LinearSVC() работает на тегах 'Квартира', 'Кино', 'Музыка', 'Украина', 'Футбол', которым соответствуют категории 2, 3, 5, 11, 12.\\
+\tabИз матрицы ошибок видно, что чаще всего классификатор ошибался, относя новости категории Политика, Происшествия к классу Общество. 
+\includegraphics[scale=0.8]{f14.png}\\
 %--------------------------------------------------------------------
 \newpage
 \addcontentsline{toc}{section}{Заключение}
@@ -325,18 +332,14 @@ $$P(w|t) = \frac{F_{r}(w,t)+1}{F_{r}(w)+|R(w)|}$$\\
 \section*{Список использованных источников}
 \renewcommand{\refname}{}
 \begin{thebibliography}{7}
-\bibitem{i1} Applied Text Analysis with Python by Benjamin Bengfort, Rebecca Bilbro, and Tony Ojeda (O’Reilly). 978­1­491­96304­3
+\bibitem{i1} Applied Text Analysis with Python by Benjamin Bengfort, Rebecca Bilbro, and Tony Ojeda (O’Reilly). ISBN 978­–1­–491­9630-4­-3
 \bibitem{i2} Автоматическая обработка текстов на естественном языке и анализ данных : учеб. пособие / Большакова Е.И., Воронцов К.В., Ефремова Н.Э., Клышинский Э.С., Лукашевич Н.В., Сапин А.С. — М.: Изд-во НИУ ВШЭ, 2017. — 269 с. ISBN 978–5–9909752-1-7
-\bibitem{i3}МЕТОДЫ И МОДЕЛИ АВТОМАТИЧЕСКОГО ИЗВЛЕЧЕНИЯ КЛЮЧЕВЫХ СЛОВ С.О. Шереметьева, П.Г. Осминин Вестник ЮУрГУ. Серия «Лингвистика». 2015. Т. 12, No 1. С. 76–81
+\bibitem{i3}МЕТОДЫ И МОДЕЛИ АВТОМАТИЧЕСКОГО ИЗВЛЕЧЕНИЯ КЛЮЧЕВЫХ СЛОВ, С.О. Шереметьева, П.Г. Осминин Вестник ЮУрГУ. Серия «Лингвистика». 2015. Т. 12, No 1. С. 76–81
 \bibitem{i4}https://countwordsfree.com/stopwords/russian
-\bibitem{i5}Automated News Categorization using Machine Learning
-methods
-U Suleymanov1
- and S Rustamov2,3
- Applying Machine Learning Algorithms for News Articles Categorization: Using SVM and kNN with TF-IDF Approach
- A Comparative Analysis Of News Categorization
-Using Machine Learning Approaches
-Nabamita Deb, Vishesh Jha, Alok K Panjiyar, Roshan Kr Gupta
+\bibitem{i5}Automated News Categorization using Machine Learning methods, U. Suleymanov and S. Rustamov
+\bibitem{i6}Applying Machine Learning Algorithms for News Articles Categorization: Using SVM and kNN with TF-IDF Approach
+\bibitem{i7}A Comparative Analysis Of News Categorization Using Machine Learning Approaches, Nabamita Deb, Vishesh Jha, Alok K Panjiyar, Roshan Kr Gupta
+\bibitem{i8}https://serokell.io/blog/machine-learning-algorithm-classification-overview
 \end{thebibliography}
 %--------------------------------------------------------------------
 \newpage
